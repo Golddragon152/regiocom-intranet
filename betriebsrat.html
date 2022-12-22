@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<!--[if IE 9 ]>
+<html class="ie9"><![endif]-->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Material Admin</title>
+
+    <!-- Vendor CSS -->
+    <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/sweetalert/dist/sweetalert.css" rel="stylesheet">
+    <link href="vendors/bower_components/material-design-iconic-font/dist/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.min.css" rel="stylesheet">
+
+    <!-- CSS -->
+    <link href="css/app_1.css" rel="stylesheet">
+    <link href="css/app_2.css" rel="stylesheet">
+
+</head>
+<body>
+<header id="header" class="clearfix" data-ma-theme="blue">
+    <ul class="h-inner">
+        <li class="hi-trigger ma-trigger" data-ma-action="sidebar-open" data-ma-target="#sidebar">
+            <div class="line-wrap">
+                <div class="line top"></div>
+                <div class="line center"></div>
+                <div class="line bottom"></div>
+            </div>
+        </li>
+
+        <li class="hi-logo hidden-xs">
+            <a href="index.html">regiocom Intranet</a>
+        </li>
+
+        <li class="pull-right">
+            <ul class="hi-menu">
+
+                <li data-ma-action="search-open">
+                    <a href=""><i class="him-icon zmdi zmdi-search"></i></a>
+                </li>
+
+                <li class="dropdown">
+                    <a data-toggle="dropdown" href="">
+                        <i class="him-icon zmdi zmdi-notifications"></i>
+                        <i class="him-counts">9</i>
+                    </a>
+                </li>
+
+                <li class="dropdown">
+                    <a data-toggle="dropdown" href=""><i class="him-icon zmdi zmdi-more-vert"></i></a>
+                    <ul class="dropdown-menu dm-icon pull-right">
+                        <li class="divider hidden-xs"></li>
+                        <li class="hidden-xs">
+                            <a data-ma-action="fullscreen" href=""><i class="zmdi zmdi-fullscreen"></i> Toggle
+                                Fullscreen</a>
+                        </li>
+                        <li>
+                            <a data-ma-action="clear-localstorage" href=""><i class="zmdi zmdi-delete"></i> Clear Local
+                                Storage</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="zmdi zmdi-face"></i> Privacy Settings</a>
+                        </li>
+                        <li>
+                            <a href=""><i class="zmdi zmdi-settings"></i> Other Settings</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+
+    <!-- Top Search Content -->
+    <div class="h-search-wrap">
+        <div class="hsw-inner">
+            <i class="hsw-close zmdi zmdi-close" data-ma-action="search-close"></i>
+            <input type="text">
+        </div>
+    </div>
+</header>
+
+<section id="main">
+    <aside id="sidebar" class="sidebar c-overflow">
+        <ul class="main-menu">
+            <li class="active">
+                <a href="index.html"><i class="zmdi zmdi-home"></i>Dashboard</a>
+            </li>
+            <li><a href="index.html"><i class="zmdi zmdi-library"></i>News</a></li>
+            <li class="sub-menu">
+                <a href="" data-ma-action="submenu-toggle"><i class="zmdi zmdi-pin"></i>Wissen</a>
+
+                <ul>
+                    <li><a href="index.html">A - Z</a></li>
+                    <li><a href="index.html">Ausbildung</a></li>
+                    <li><a href="index.html">Bereiche</a></li>
+                    <li><a href="index.html">Unternehmen</a></li>
+                </ul>
+            </li>
+            <li><a href="betriebsrat.html"><i class="zmdi zmdi-male-female"></i>Betriebsrat</a></li>
+            <li><a href="index.html"><i class="zmdi zmdi-store"></i>Jobs</a></li>
+        </ul>
+    </aside>
+
+    <section id="content">
+        <div class="container">
+            <div class="block-header">
+                <h2>Dashboard</h2>
+            </div>
+
+            <div class="row" style="margin-bottom: 18px;">
+                <div class="col-xs-6 col-sm-4">
+                    <a href="#">
+                        <div class="bgm-gray brd-2 p-15">
+                            <div class="c-white m-b-5">Tarifvertrag</div>
+                            <h2 class="m-0 c-white f-300">2016</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-6 col-sm-4">
+                    <a href="#">
+                        <div class="bgm-gray brd-2 p-15">
+                            <div class="c-white m-b-5">Betriebsvereinbarungen</div>
+                            <h2 class="m-0 c-white f-300">ab 2011</h2>
+                        </div>
+                    </a>
+                </div>
+
+                <div class="col-xs-6 col-sm-4">
+                    <a href="#">
+                        <div class="bgm-gray brd-2 p-15">
+                            <div class="c-white m-b-5">Eigene Themen</div>
+                            <h2 class="m-0 c-white f-300">Vertragsverhandlungen</h2>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col-sm-8">
+                    <!-- Recent Posts -->
+                    <div class="card">
+                        <div class="card-header ch-alt m-b-20">
+                            <h2>News
+                                <small>Was man wissen muss</small>
+                            </h2>
+                            <ul class="actions">
+                                <li>
+                                    <a href="">
+                                        <i class="zmdi zmdi-refresh-alt"></i>
+                                    </a>
+                                </li>
+                                <li class="dropdown">
+                                    <a href="" data-toggle="dropdown">
+                                        <i class="zmdi zmdi-more-vert"></i>
+                                    </a>
+
+                                    <ul class="dropdown-menu dropdown-menu-right">
+                                        <li>
+                                            <a href="">Datumsbereich anpassen</a>
+                                        </li>
+                                        <li>
+                                            <a href="">Archiv</a>
+                                        </li>
+                                        <li>
+                                            <a href="">News Guide</a>
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="card-body">
+                            <div class="list-group">
+                                <a class="list-group-item media" href="">
+                                    <div class="media-body">
+                                        <div class="lgi-heading">Der Bereich Steuerung Prozsse und Services sucht</div>
+                                        <small class="lgi-text">Jobangebot Mitarbeiter Application Support (m/w)</small>
+                                    </div>
+                                </a>
+                                <a class="list-group-item media" href="">
+                                    <div class="media-body">
+                                        <div class="lgi-heading">Sommerfest 2016</div>
+                                        <small class="lgi-text">20 Jahre regiocom - Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
+                                            magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est
+                                            Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna
+                                            aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem
+                                            ipsum dolor sit amet.
+                                        </small>
+                                    </div>
+                                </a>
+                                <a class="list-group-item media" href="">
+                                    <div class="media-body">
+                                        <div class="lgi-heading">Der Bereich Steuerung Prozsse und Services sucht</div>
+                                        <small class="lgi-text">Jobangebot Mitarbeiter Application Support (m/w)</small>
+                                    </div>
+                                </a>
+                                <a class="list-group-item media" href="">
+                                    <div class="media-body">
+                                        <div class="lgi-heading">Der Bereich Steuerung Prozsse und Services sucht</div>
+                                        <small class="lgi-text">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,
+                                            sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
+                                            amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
+                                            voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+                                        </small>
+                                    </div>
+                                </a>
+                                <a class="view-more" href="">View All</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Ansprechpartner -->
+                    <div class="card">
+                        <div class="action-header clearfix">
+                            <div class="ah-label hidden-xs">Der Betriebsrat</div>
+                        </div>
+
+                        <div class="card-body card-padding">
+
+                            <div class="contacts clearfix row">
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="img/9.jpg" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Hans Martin</strong>
+                                            <small>hans.martin@rcddm.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="img/15.jpg" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Hans Martin</strong>
+                                            <small>hans.martin@rcddm.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="img/9.jpg" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Hans Martin</strong>
+                                            <small>hans.martin@rcddm.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="img/10.jpg" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Hans Martin</strong>
+                                            <small>hans.martin@rcddm.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="img/11.jpg" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Hans Martin</strong>
+                                            <small>hans.martin@rcddm.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="img/15.jpg" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Hans Martin</strong>
+                                            <small>hans.martin@rcddm.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="img/15.jpg" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Hans Martin</strong>
+                                            <small>hans.martin@rcddm.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="img/15.jpg" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Hans Martin</strong>
+                                            <small>hans.martin@rcddm.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="col-md-2 col-sm-4 col-xs-6">
+                                    <div class="c-item">
+                                        <a href="" class="ci-avatar">
+                                            <img src="img/15.jpg" alt="">
+                                        </a>
+
+                                        <div class="c-info">
+                                            <strong>Hans Martin</strong>
+                                            <small>hans.martin@rcddm.com</small>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-sm-4">
+                    <!-- Rezepte -->
+                    <div class="card">
+                        <div class="card-header bgm-amber">
+                            <h2>Rezeptideen
+                                <small>Gesunde Mahlzeiten für unsere Kollegen</small>
+                            </h2>
+                        </div>
+
+                        <div class="card-body card-padding">
+                            <img src="img/food.jpg" class="img-responsive" alt="">
+
+                            <p style="padding-top: 10px;">
+                                Cras leo sem, egestas a accumsan eget, euismod at nunc. Praesent vel mi blandit, tempus
+                                ex gravida, accumsan dui. Sed sed aliquam augue.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Sport -->
+                    <div class="card">
+                        <div class="card-header bgm-amber">
+                            <h2>Sportangebote </h2>
+                        </div>
+
+                        <div class="card-body">
+                            <img src="img/rich-froning-pullquote.jpg" class="img-responsive" alt="">
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="row">
+            </div>
+        </div>
+    </section>
+</section>
+
+<footer id="footer">
+    Copyright &copy; 2016 regiocom GmbH
+
+    <ul class="f-menu">
+        <li><a href="">Dashboard</a></li>
+        <li><a href="">rcWiki</a></li>
+        <li><a href="">Lotus Notes</a></li>
+    </ul>
+</footer>
+
+<!-- Page Loader -->
+<div class="page-loader">
+    <div class="preloader pls-blue">
+        <svg class="pl-circular" viewBox="25 25 50 50">
+            <circle class="plc-path" cx="50" cy="50" r="20"/>
+        </svg>
+
+        <p>Einen Moment...</p>
+    </div>
+</div>
+
+<!-- Javascript Libraries -->
+<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+
+<script src="vendors/bower_components/flot/jquery.flot.js"></script>
+<script src="vendors/bower_components/flot/jquery.flot.resize.js"></script>
+<script src="vendors/bower_components/flot.curvedlines/curvedLines.js"></script>
+<script src="vendors/sparklines/jquery.sparkline.min.js"></script>
+<script src="vendors/bower_components/jquery.easy-pie-chart/dist/jquery.easypiechart.min.js"></script>
+
+<script src="vendors/bower_components/moment/min/moment.min.js"></script>
+<script src="vendors/bower_components/fullcalendar/dist/fullcalendar.min.js "></script>
+<script src="vendors/bower_components/simpleWeather/jquery.simpleWeather.min.js"></script>
+<script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+<script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+<script src="vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+<script src="vendors/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.concat.min.js"></script>
+
+<!-- Placeholder for IE9 -->
+<!--[if IE 9 ]>
+<script src="vendors/bower_components/jquery-placeholder/jquery.placeholder.min.js"></script>
+<![endif]-->
+
+<script src="js/app.js"></script>
+</body>
+</html>
